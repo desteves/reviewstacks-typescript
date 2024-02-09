@@ -1,6 +1,10 @@
-# reviewstacks-typescript 🚧🦺🏗️ WORK IN PROGRESS
+# reviewstacks-typescript
 
 A Pulumi template to quickly add Pulumi Cloud Review Stacks to your existing Pulumi program
+
+> [!IMPORTANT]
+> [Install the Pulumi GitHub App](https://www.pulumi.com/docs/using-pulumi/continuous-delivery/github-app/#installation-and-configuration) before proceeding.
+
 
 The template lives in the `infra/` subfolder
 

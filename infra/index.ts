@@ -1,19 +1,19 @@
 import * as pulumi from "@pulumi/pulumi";
 import * as service from "@pulumi/pulumiservice";
 
-
 // Configurations
 const organization = pulumi.getOrganization();
-const project = pulumi.getProject();
 const config = new pulumi.Config();
 const repository: string = config.require('repository');
 const branch: string = config.require('branch');
 const repoDir: string = config.require('repoDir');
-const stackRef = config.require('stackRef');
+const projectRef:string = config.require('projectRef');
+const stackRef: string = config.require('stackRef');
 
-const settings = new service.DeploymentSettings("ds", {
+// Resources
+new service.DeploymentSettings("ds", {
     organization: organization,
-    project: project,
+    project: projectRef,
     stack: stackRef, //"test
 	github: {
         // this single stack is used for both push to deploy + PR previews

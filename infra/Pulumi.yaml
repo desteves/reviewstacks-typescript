@@ -9,13 +9,15 @@ template:
       description: The AWS region to deploy into
       default: us-west-2
     repository:
-      description: The GitHub repository to add Review Stacks in org/repo format.
+      description: The GitHub repository to add Review Stack in org/repo format.
     branch:
       description: The branch of the GiHub repository to add Review Stacks
       default: refs/heads/main
     repoDir:
       description: The directory within the repository where the Pulumi.yaml is located. Enter '.' for root.
       default: infra
+    projectRef:
+      description: The Pulumi project to reference
     stackRef:
-      description: The 
-      default: aws-oidc-env
+      description: The Pulumi stack to reference
+      default: test
