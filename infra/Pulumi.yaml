@@ -5,9 +5,6 @@ runtime: nodejs
 template:
   description: A TypeScript Pulumi program to set up Pulumi Deployments Review Stacks
   config:
-    aws:region:
-      description: The AWS region to deploy into
-      default: us-west-2
     repository:
       description: The GitHub repository to add Review Stack in org/repo format.
     branch:
