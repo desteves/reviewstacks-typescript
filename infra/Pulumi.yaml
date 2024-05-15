@@ -10,7 +10,7 @@ template:
       default: desteves/pulumi-reviewstacks-demo
     branchRef:
       description: The GitHub repo branch to add Review Stacks.
-      default: refs/heads/feature-x
+      default: refs/heads/main
     repoDirRef:
       description: The GitHub repo folder where the Pulumi.<stack>.yaml is located. Use '.' for root.
       default: infra
