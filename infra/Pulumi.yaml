@@ -5,16 +5,18 @@ runtime: nodejs
 template:
   description: A TypeScript Pulumi program to set up Pulumi Deployments Review Stacks
   config:
-    repository:
-      description: The GitHub repository to add Review Stack in org/repo format.
-    branch:
-      description: The branch of the GiHub repository to add Review Stacks
-      default: refs/heads/main
-    repoDir:
-      description: The directory within the repository where the Pulumi.yaml is located. Enter '.' for root.
+    repositoryRef:
+      description: The GitHub repo to add Review Stacks. (Pulumi GH App access required)
+      default: desteves/pulumi-reviewstacks-demo
+    branchRef:
+      description: The GitHub repo branch to add Review Stacks.
+      default: refs/heads/feature-x
+    repoDirRef:
+      description: The GitHub repo folder where the Pulumi.<stack>.yaml is located. Use '.' for root.
       default: infra
     projectRef:
       description: The Pulumi project to reference
+      default: live-workshop
     stackRef:
       description: The Pulumi stack to reference
-      default: test
+      default: dev

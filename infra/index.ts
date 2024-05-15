@@ -4,9 +4,10 @@ import * as service from "@pulumi/pulumiservice";
 // Configurations
 const organization = pulumi.getOrganization();
 const config = new pulumi.Config();
-const repository: string = config.require('repository');
-const branch: string = config.require('branch');
-const repoDir: string = config.require('repoDir');
+
+const repositoryRef: string = config.require('repositoryRef');
+const branchRef: string = config.require('branchRef');
+const repoDirRef: string = config.require('repoDirRef');
 const projectRef:string = config.require('projectRef');
 const stackRef: string = config.require('stackRef');
 
@@ -21,12 +22,12 @@ new service.DeploymentSettings("ds", {
 		deployCommits: true,
 		previewPullRequests: true,
 		pullRequestTemplate: true,
-		repository: repository, //"desteves/pulumi-reviewstacks-demo",
+		repository: repositoryRef, //"desteves/pulumi-reviewstacks-demo",
 	},
     sourceContext: {
         git: {
-            branch: branch, //"refs/heads/main",
-            repoDir: repoDir, //"infra"
+            branch: branchRef, //"refs/heads/main",
+            repoDir: repoDirRef, //"infra"
         }
     }
 });

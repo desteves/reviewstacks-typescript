@@ -2,10 +2,10 @@
     "name": "reviewstacks-typescript",
     "main": "index.ts",
     "devDependencies": {
-        "@types/node": "^18.19.15"
+        "@types/node": "^18.19.33"
     },
     "dependencies": {
-        "@pulumi/pulumi": "^3.105.0",
+        "@pulumi/pulumi": "^3.116.1",
         "@pulumi/pulumiservice": "^0.17.0"
     }
 }
