@@ -16,7 +16,7 @@ template:
       default: infra
     projectRef:
       description: The Pulumi project to reference
-      default: live-workshop
+      default: workshop
     stackRef:
       description: The Pulumi stack to reference
       default: dev
